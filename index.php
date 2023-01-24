@@ -15,6 +15,13 @@ class Movie {
         $this -> genre = $genre;
         $this -> year = $year;
     }
+
+    public function getMovie() {
+
+       return "MOVIE: " . $this -> title 
+       . " / " . $this-> genre
+       . " / " . $this -> year; 
+    }
 }
 
 echo "<h1> MOVIE LIST </h1>";
@@ -24,13 +31,10 @@ $movie2 = new Movie("Harry Potter e la pietra filosofale", "Fantascienza", "6 di
 
 // var_dump($movie1);
 
-echo "MOVIE: " . $movie1 -> title 
-    . " / " . $movie1 -> genre
-    . " / " . $movie1 -> year;
+echo $movie1 -> getMovie();
     
 echo "<br>";
 
-echo "MOVIE: " . $movie2 -> title 
-    . " / " . $movie2 -> genre
-    . " / " . $movie2 -> year;
+echo $movie2 -> getMovie();
+ 
 
